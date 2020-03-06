@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res)=>{
-	res.send(database.users)
+	res.send('Server is online')
 })
 
 //queries(trx) should be returned to the knex object(db in this case) if need be..
