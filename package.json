@@ -4,7 +4,7 @@
   "description": "for face recognition project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "GAMHnile",
   "license": "ISC",
