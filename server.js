@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const bcrypt = require("bcrypt-nodejs");
+const compression = require('compression');
 const cors = require("cors");
 const knex = require("knex");
 const signin = require("./controllers/signin.js");
