@@ -1,15 +1,21 @@
 {
   "name": "finalserver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "for face recognition project",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "build": "cd client && npm run build",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "GAMHnile",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
